@@ -1,0 +1,40 @@
+﻿@model User
+
+<h1 class="bg-info text-white">Create User</h1>
+<a asp-action="Index" class="btn btn-secondary">Back</a>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            
+            <form method="post">
+                
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Username"></label>
+                    <input class="form-control" type="text" asp-for="Username" />
+                    <span class="text-danger" asp-validation-for="Username"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Email"></label>
+                    <input class="form-control" type="text" asp-for="Email" />
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Password"></label>
+                    <input class="form-control" type="password" asp-for="Password" />
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="ConfirmPassword"></label>
+                    <input class="form-control" type="password" asp-for="ConfirmPassword" />
+                    <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

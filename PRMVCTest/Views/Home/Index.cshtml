@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    @model string
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>This is a <a href="https://docs.microsoft.com/aspnet/core">MVC Net Core 5 App</a> developed for a Test for Puzzle Recruitment .</p>
+    <br />
+    @Model
+    @if (User?.Identity?.IsAuthenticated ?? false)
+    {
+        <a asp-controller="Account" asp-action="Logout" class="btn btn-danger">Logout</a>
+    }
+</div>
